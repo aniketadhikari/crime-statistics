@@ -3,16 +3,15 @@ project:
   output-dir: /
 
 website:
-  title: "crime-statistics"
+  title: "Group 10 Crime Statistics"
   navbar:
     style: docked
     left:
       - href: index.qmd
         text: Home
       - about.qmd
-      - href: map.html
-        text: Map of U.S.
-
+      - href: 2022_map.html
+        text: 2022 Map of U.S.
 format:
   html:
     theme: lux
