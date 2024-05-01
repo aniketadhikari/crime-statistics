@@ -9,7 +9,6 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
       - href: 2022_map.html
         text: 2022 Map of U.S.
       - href: 2021_map.html
