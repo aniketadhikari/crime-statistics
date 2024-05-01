@@ -12,6 +12,8 @@ website:
       - about.qmd
       - href: 2022_map.html
         text: 2022 Map of U.S.
+      - href: 2021_map.html
+        text: 2021 Map of U.S.
 format:
   html:
     theme: lux
