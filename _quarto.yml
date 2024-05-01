@@ -3,18 +3,24 @@ project:
   output-dir: /
 
 website:
-  title: "Group 10 Crime Statistics"
+  title: "Group 10"
   navbar:
     style: docked
     left:
-      - href: index.qmd
-        text: Home
       - href: 2022_map.html
-        text: 2022 Map of U.S.
+        text: 2022 Map
       - href: 2021_map.html
-        text: 2021 Map of U.S.
+        text: 2021 Map
       - href: ChoroplethMaps.html
         text: Choropleth Map
+      - href: property_offense_pie.html
+        text: Property Offenses
+      - href: individual_offenses_pie.html
+        text: Individual Offenses
+      - href: line_graph.html
+        text: Violent + Property Offenses (1985 - 2022)
+      - href: violent_offenses_pie.html
+        text: Violent Offenses
 format:
   html:
     theme: lux

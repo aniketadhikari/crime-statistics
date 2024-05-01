@@ -1,12 +1,14 @@
 ---
 title: Home
-listing:
-  contents: /
-  type: default
-  sort-ui: false
-  filter-ui: false
 page-layout: full
 title-block-banner: true
 toc: true
 ---
 
+In the realm of crime analysis and policy-making, there exists a critical need to bridge the gap between non-intuitive data sets and public understanding. Currently, crime data is often communicated via intricate statistics, spreadsheets, and reports filled with technical jargon, making it difficult for a broad audience to understand. This lack of accessibility hinders public awareness of crime trends and may obstruct the advocacy for better policies. 
+
+The aim of this project is to address this challenge by creating intuitive, user-friendly visualizations of crime data that are easily understood by a large audience. We seek to empower users to better internalize and interpret crime data by creating a series of engaging visualizations such as interactive maps, charts, and plots. We believe that allowing users to interact with the data, compare information, and identify patterns at different levels will facilitate a deeper understanding of crime data among the public.
+
+The difficulty of our task lies in developing visualizations that strike an effective balance between simplicity and informativeness. Visualizations that are too simple may fail to convey meaningful information, while visualizations that are too complex may overwhelm users. Moreover, crime datasets are often complicated by numerous demographic and other variables. These variables may pose a challenge as it will be necessary to determine which will meaningfully contribute to our visualizations.
+
+Despite these challenges, our visualizations have the potential to spread public awareness about crime trends and drive informed decision-making. For this reason, we believe that our project will provide value to policy makers as well as the general public. 
