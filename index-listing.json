@@ -2,6 +2,7 @@
   "listing": "/index.html",
   "items": [
     "/2021_map.html",
-    "/2022_map.html"
+    "/2022_map.html",
+    "/ChoroplethMaps.html"
   ]
 }

@@ -13,6 +13,8 @@ website:
         text: 2022 Map of U.S.
       - href: 2021_map.html
         text: 2021 Map of U.S.
+      - href: ChoroplethMaps.html
+        text: Choropleth Map
 format:
   html:
     theme: lux

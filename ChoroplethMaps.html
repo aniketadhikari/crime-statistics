@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>choroplethmaps</title>
+<title>Group 10 Crime Statistics - Choropleth Maps</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -57,121 +57,247 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="ChoroplethMaps_files/libs/clipboard/clipboard.min.js"></script>
-<script src="ChoroplethMaps_files/libs/quarto-html/quarto.js"></script>
-<script src="ChoroplethMaps_files/libs/quarto-html/popper.min.js"></script>
-<script src="ChoroplethMaps_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="ChoroplethMaps_files/libs/quarto-html/anchor.min.js"></script>
-<link href="ChoroplethMaps_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="ChoroplethMaps_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="ChoroplethMaps_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="ChoroplethMaps_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="ChoroplethMaps_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 <script src="https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js" crossorigin="anonymous"></script>
 
 
+<link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="fullcontent">
+<body class="nav-fixed">
 
-<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Group 10 Crime Statistics</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./2022_map.html"> 
+<span class="menu-text">2022 Map of U.S.</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./2021_map.html"> 
+<span class="menu-text">2021 Map of U.S.</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./ChoroplethMaps.html" aria-current="page"> 
+<span class="menu-text">Choropleth Map</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#import-the-necessary-libraries" id="toc-import-the-necessary-libraries" class="nav-link active" data-scroll-target="#import-the-necessary-libraries">Import the Necessary Libraries</a></li>
+  <li><a href="#state-abbreviation-mapping" id="toc-state-abbreviation-mapping" class="nav-link" data-scroll-target="#state-abbreviation-mapping">State Abbreviation Mapping</a></li>
+  <li><a href="#use-pandas-to-alter-excel-sheet" id="toc-use-pandas-to-alter-excel-sheet" class="nav-link" data-scroll-target="#use-pandas-to-alter-excel-sheet">Use Pandas to Alter Excel Sheet</a></li>
+  <li><a href="#aggregate-data-by-state-and-sum-up-the-crimes" id="toc-aggregate-data-by-state-and-sum-up-the-crimes" class="nav-link" data-scroll-target="#aggregate-data-by-state-and-sum-up-the-crimes">Aggregate data by state and sum up the crimes</a></li>
+  <li><a href="#convert-state-names-to-abbreviations" id="toc-convert-state-names-to-abbreviations" class="nav-link" data-scroll-target="#convert-state-names-to-abbreviations">Convert state names to abbreviations</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
 <main class="content" id="quarto-document-content">
 
-
-
-
-<div id="2505d96f" class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pip install plotly</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Choropleth Maps</h1>
 </div>
-<div id="b159418e" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.graph_objects <span class="im">as</span> go</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> ipywidgets <span class="im">as</span> widgets</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># State abbreviation mapping</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>state_abbrev <span class="op">=</span> {</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'ALABAMA'</span>: <span class="st">'AL'</span>, <span class="st">'ALASKA'</span>: <span class="st">'AK'</span>, <span class="st">'ARIZONA'</span>: <span class="st">'AZ'</span>, <span class="st">'ARKANSAS'</span>: <span class="st">'AR'</span>, <span class="st">'CALIFORNIA'</span>: <span class="st">'CA'</span>,</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'COLORADO'</span>: <span class="st">'CO'</span>, <span class="st">'CONNECTICUT'</span>: <span class="st">'CT'</span>, <span class="st">'DELAWARE'</span>: <span class="st">'DE'</span>, <span class="st">'FLORIDA'</span>: <span class="st">'FL'</span>, <span class="st">'GEORGIA'</span>: <span class="st">'GA'</span>,</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'HAWAII'</span>: <span class="st">'HI'</span>, <span class="st">'IDAHO'</span>: <span class="st">'ID'</span>, <span class="st">'ILLINOIS'</span>: <span class="st">'IL'</span>, <span class="st">'INDIANA'</span>: <span class="st">'IN'</span>, <span class="st">'IOWA'</span>: <span class="st">'IA'</span>,</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">'KANSAS'</span>: <span class="st">'KS'</span>, <span class="st">'KENTUCKY'</span>: <span class="st">'KY'</span>, <span class="st">'LOUISIANA'</span>: <span class="st">'LA'</span>, <span class="st">'MAINE'</span>: <span class="st">'ME'</span>, <span class="st">'MARYLAND'</span>: <span class="st">'MD'</span>,</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">'MASSACHUSETTS'</span>: <span class="st">'MA'</span>, <span class="st">'MICHIGAN'</span>: <span class="st">'MI'</span>, <span class="st">'MINNESOTA'</span>: <span class="st">'MN'</span>, <span class="st">'MISSISSIPPI'</span>: <span class="st">'MS'</span>,</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">'MISSOURI'</span>: <span class="st">'MO'</span>, <span class="st">'MONTANA'</span>: <span class="st">'MT'</span>, <span class="st">'NEBRASKA'</span>: <span class="st">'NE'</span>, <span class="st">'NEVADA'</span>: <span class="st">'NV'</span>, <span class="st">'NEW HAMPSHIRE'</span>: <span class="st">'NH'</span>,</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">'NEW JERSEY'</span>: <span class="st">'NJ'</span>, <span class="st">'NEW MEXICO'</span>: <span class="st">'NM'</span>, <span class="st">'NEW YORK'</span>: <span class="st">'NY'</span>, <span class="st">'NORTH CAROLINA'</span>: <span class="st">'NC'</span>,</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">'NORTH DAKOTA'</span>: <span class="st">'ND'</span>, <span class="st">'OHIO'</span>: <span class="st">'OH'</span>, <span class="st">'OKLAHOMA'</span>: <span class="st">'OK'</span>, <span class="st">'OREGON'</span>: <span class="st">'OR'</span>, <span class="st">'PENNSYLVANIA'</span>: <span class="st">'PA'</span>,</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">'RHODE ISLAND'</span>: <span class="st">'RI'</span>, <span class="st">'SOUTH CAROLINA'</span>: <span class="st">'SC'</span>, <span class="st">'SOUTH DAKOTA'</span>: <span class="st">'SD'</span>, <span class="st">'TENNESSEE'</span>: <span class="st">'TN'</span>,</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">'TEXAS'</span>: <span class="st">'TX'</span>, <span class="st">'UTAH'</span>: <span class="st">'UT'</span>, <span class="st">'VERMONT'</span>: <span class="st">'VT'</span>, <span class="st">'VIRGINIA'</span>: <span class="st">'VA'</span>, <span class="st">'WASHINGTON'</span>: <span class="st">'WA'</span>,</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">'WEST VIRGINIA'</span>: <span class="st">'WV'</span>, <span class="st">'WISCONSIN'</span>: <span class="st">'WI'</span>, <span class="st">'WYOMING'</span>: <span class="st">'WY'</span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>data_path <span class="op">=</span> <span class="st">"United_States_Offense_Type_by_Agency_2022.xlsx"</span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_excel(data_path, sheet_name<span class="op">=</span><span class="st">'2022 Cities with Location'</span>)</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Aggregate data by state and sum up the crimes</span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>aggregated_data <span class="op">=</span> df.groupby(<span class="st">'State'</span>).agg({</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Total</span><span class="ch">\n</span><span class="st">Offenses'</span>: <span class="st">'sum'</span>,</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Crimes</span><span class="ch">\n</span><span class="st">Against</span><span class="ch">\n</span><span class="st">Persons'</span>: <span class="st">'sum'</span>,</span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Crimes</span><span class="ch">\n</span><span class="st">Against</span><span class="ch">\n</span><span class="st">Property'</span>: <span class="st">'sum'</span>,</span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Crimes</span><span class="ch">\n</span><span class="st">Against</span><span class="ch">\n</span><span class="st">Society'</span>: <span class="st">'sum'</span></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>}).reset_index()</span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert state names to abbreviations</span></span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>aggregated_data[<span class="st">'State'</span>] <span class="op">=</span> aggregated_data[<span class="st">'State'</span>].<span class="bu">map</span>(state_abbrev)</span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> col <span class="kw">in</span> aggregated_data.columns:</span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> col <span class="op">!=</span> <span class="st">'State'</span>:</span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>        aggregated_data[col] <span class="op">=</span> aggregated_data[col].astype(<span class="bu">float</span>)</span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>options <span class="op">=</span> [<span class="st">"Total</span><span class="ch">\n</span><span class="st">Offenses"</span>, <span class="st">"Crimes</span><span class="ch">\n</span><span class="st">Against</span><span class="ch">\n</span><span class="st">Persons"</span>, <span class="st">"Crimes</span><span class="ch">\n</span><span class="st">Against</span><span class="ch">\n</span><span class="st">Property"</span>, <span class="st">"Crimes</span><span class="ch">\n</span><span class="st">Against</span><span class="ch">\n</span><span class="st">Society"</span>]</span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>dropdown <span class="op">=</span> widgets.Dropdown(options<span class="op">=</span>options, description<span class="op">=</span><span class="st">'Filter:'</span>)</span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> update_map(change):</span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>    crime_type <span class="op">=</span> change[<span class="st">'new'</span>]</span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>    aggregated_data[<span class="st">'text'</span>] <span class="op">=</span> aggregated_data[<span class="st">'State'</span>] <span class="op">+</span> <span class="st">'&lt;br&gt;'</span> <span class="op">+</span> crime_type <span class="op">+</span> <span class="st">' '</span> <span class="op">+</span> aggregated_data[crime_type].astype(<span class="bu">str</span>)</span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create a new choropleth figure</span></span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>    fig <span class="op">=</span> go.Figure(data<span class="op">=</span>go.Choropleth(</span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>        locations<span class="op">=</span>aggregated_data[<span class="st">'State'</span>], </span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>        z<span class="op">=</span>aggregated_data[crime_type],</span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>        locationmode<span class="op">=</span><span class="st">'USA-states'</span>,</span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>        colorscale<span class="op">=</span><span class="st">'Reds'</span>,</span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>        autocolorscale<span class="op">=</span><span class="va">False</span>,</span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>        text<span class="op">=</span>aggregated_data[<span class="st">'text'</span>],  <span class="co"># hover text</span></span>
-<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>        marker_line_color<span class="op">=</span><span class="st">'white'</span>,  <span class="co"># line markers between states</span></span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>        colorbar_title<span class="op">=</span><span class="st">"Number of Incidents"</span></span>
-<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>    ))</span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>    fig.update_layout(</span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>        title_text<span class="op">=</span><span class="ss">f'</span><span class="sc">{</span>crime_type<span class="sc">}</span><span class="ss"> by State in 2022&lt;br&gt;(Hover for details)'</span>,</span>
-<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>        geo<span class="op">=</span><span class="bu">dict</span>(</span>
-<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>            scope<span class="op">=</span><span class="st">'usa'</span>,</span>
-<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>            projection<span class="op">=</span>go.layout.geo.Projection(<span class="bu">type</span><span class="op">=</span><span class="st">'albers usa'</span>),</span>
-<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>            showlakes<span class="op">=</span><span class="va">True</span>,  <span class="co"># lakes</span></span>
-<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>            lakecolor<span class="op">=</span><span class="st">'rgb(255, 255, 255)'</span>),</span>
-<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>    fig.show()</span>
-<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>dropdown.observe(update_map, names<span class="op">=</span><span class="st">'value'</span>)</span>
-<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>display(dropdown)</span>
-<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>update_map({<span class="st">'new'</span>: dropdown.value})  <span class="co"># Trigger initial map display</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="import-the-necessary-libraries" class="level2">
+<h2 class="anchored" data-anchor-id="import-the-necessary-libraries">Import the Necessary Libraries</h2>
+<div id="a470e4d3" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.graph_objects <span class="im">as</span> go</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> ipywidgets <span class="im">as</span> widgets</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="state-abbreviation-mapping" class="level2">
+<h2 class="anchored" data-anchor-id="state-abbreviation-mapping">State Abbreviation Mapping</h2>
+<div id="4e8421f7" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>state_abbrev <span class="op">=</span> {</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'ALABAMA'</span>: <span class="st">'AL'</span>, <span class="st">'ALASKA'</span>: <span class="st">'AK'</span>, <span class="st">'ARIZONA'</span>: <span class="st">'AZ'</span>, <span class="st">'ARKANSAS'</span>: <span class="st">'AR'</span>, <span class="st">'CALIFORNIA'</span>: <span class="st">'CA'</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'COLORADO'</span>: <span class="st">'CO'</span>, <span class="st">'CONNECTICUT'</span>: <span class="st">'CT'</span>, <span class="st">'DELAWARE'</span>: <span class="st">'DE'</span>, <span class="st">'FLORIDA'</span>: <span class="st">'FL'</span>, <span class="st">'GEORGIA'</span>: <span class="st">'GA'</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'HAWAII'</span>: <span class="st">'HI'</span>, <span class="st">'IDAHO'</span>: <span class="st">'ID'</span>, <span class="st">'ILLINOIS'</span>: <span class="st">'IL'</span>, <span class="st">'INDIANA'</span>: <span class="st">'IN'</span>, <span class="st">'IOWA'</span>: <span class="st">'IA'</span>,</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'KANSAS'</span>: <span class="st">'KS'</span>, <span class="st">'KENTUCKY'</span>: <span class="st">'KY'</span>, <span class="st">'LOUISIANA'</span>: <span class="st">'LA'</span>, <span class="st">'MAINE'</span>: <span class="st">'ME'</span>, <span class="st">'MARYLAND'</span>: <span class="st">'MD'</span>,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'MASSACHUSETTS'</span>: <span class="st">'MA'</span>, <span class="st">'MICHIGAN'</span>: <span class="st">'MI'</span>, <span class="st">'MINNESOTA'</span>: <span class="st">'MN'</span>, <span class="st">'MISSISSIPPI'</span>: <span class="st">'MS'</span>,</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'MISSOURI'</span>: <span class="st">'MO'</span>, <span class="st">'MONTANA'</span>: <span class="st">'MT'</span>, <span class="st">'NEBRASKA'</span>: <span class="st">'NE'</span>, <span class="st">'NEVADA'</span>: <span class="st">'NV'</span>, <span class="st">'NEW HAMPSHIRE'</span>: <span class="st">'NH'</span>,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'NEW JERSEY'</span>: <span class="st">'NJ'</span>, <span class="st">'NEW MEXICO'</span>: <span class="st">'NM'</span>, <span class="st">'NEW YORK'</span>: <span class="st">'NY'</span>, <span class="st">'NORTH CAROLINA'</span>: <span class="st">'NC'</span>,</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'NORTH DAKOTA'</span>: <span class="st">'ND'</span>, <span class="st">'OHIO'</span>: <span class="st">'OH'</span>, <span class="st">'OKLAHOMA'</span>: <span class="st">'OK'</span>, <span class="st">'OREGON'</span>: <span class="st">'OR'</span>, <span class="st">'PENNSYLVANIA'</span>: <span class="st">'PA'</span>,</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">'RHODE ISLAND'</span>: <span class="st">'RI'</span>, <span class="st">'SOUTH CAROLINA'</span>: <span class="st">'SC'</span>, <span class="st">'SOUTH DAKOTA'</span>: <span class="st">'SD'</span>, <span class="st">'TENNESSEE'</span>: <span class="st">'TN'</span>,</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">'TEXAS'</span>: <span class="st">'TX'</span>, <span class="st">'UTAH'</span>: <span class="st">'UT'</span>, <span class="st">'VERMONT'</span>: <span class="st">'VT'</span>, <span class="st">'VIRGINIA'</span>: <span class="st">'VA'</span>, <span class="st">'WASHINGTON'</span>: <span class="st">'WA'</span>,</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">'WEST VIRGINIA'</span>: <span class="st">'WV'</span>, <span class="st">'WISCONSIN'</span>: <span class="st">'WI'</span>, <span class="st">'WYOMING'</span>: <span class="st">'WY'</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="use-pandas-to-alter-excel-sheet" class="level2">
+<h2 class="anchored" data-anchor-id="use-pandas-to-alter-excel-sheet">Use Pandas to Alter Excel Sheet</h2>
+<div id="f81a89c8" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>data_path <span class="op">=</span> <span class="st">"United_States_Offense_Type_by_Agency_2022.xlsx"</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_excel(data_path, sheet_name<span class="op">=</span><span class="st">'2022 Cities with Location'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="aggregate-data-by-state-and-sum-up-the-crimes" class="level2">
+<h2 class="anchored" data-anchor-id="aggregate-data-by-state-and-sum-up-the-crimes">Aggregate data by state and sum up the crimes</h2>
+<div id="0666fa30" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>aggregated_data <span class="op">=</span> df.groupby(<span class="st">'State'</span>).agg({</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Total</span><span class="ch">\n</span><span class="st">Offenses'</span>: <span class="st">'sum'</span>,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Crimes</span><span class="ch">\n</span><span class="st">Against</span><span class="ch">\n</span><span class="st">Persons'</span>: <span class="st">'sum'</span>,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Crimes</span><span class="ch">\n</span><span class="st">Against</span><span class="ch">\n</span><span class="st">Property'</span>: <span class="st">'sum'</span>,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Crimes</span><span class="ch">\n</span><span class="st">Against</span><span class="ch">\n</span><span class="st">Society'</span>: <span class="st">'sum'</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>}).reset_index()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="convert-state-names-to-abbreviations" class="level2">
+<h2 class="anchored" data-anchor-id="convert-state-names-to-abbreviations">Convert state names to abbreviations</h2>
+<div id="0d4291b4" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>aggregated_data[<span class="st">'State'</span>] <span class="op">=</span> aggregated_data[<span class="st">'State'</span>].<span class="bu">map</span>(state_abbrev)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> col <span class="kw">in</span> aggregated_data.columns:</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> col <span class="op">!=</span> <span class="st">'State'</span>:</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>        aggregated_data[col] <span class="op">=</span> aggregated_data[col].astype(<span class="bu">float</span>)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>options <span class="op">=</span> [<span class="st">"Total</span><span class="ch">\n</span><span class="st">Offenses"</span>, <span class="st">"Crimes</span><span class="ch">\n</span><span class="st">Against</span><span class="ch">\n</span><span class="st">Persons"</span>, <span class="st">"Crimes</span><span class="ch">\n</span><span class="st">Against</span><span class="ch">\n</span><span class="st">Property"</span>, <span class="st">"Crimes</span><span class="ch">\n</span><span class="st">Against</span><span class="ch">\n</span><span class="st">Society"</span>]</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>dropdown <span class="op">=</span> widgets.Dropdown(options<span class="op">=</span>options, description<span class="op">=</span><span class="st">'Filter:'</span>)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> update_map(change):</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    crime_type <span class="op">=</span> change[<span class="st">'new'</span>]</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    aggregated_data[<span class="st">'text'</span>] <span class="op">=</span> aggregated_data[<span class="st">'State'</span>] <span class="op">+</span> <span class="st">'&lt;br&gt;'</span> <span class="op">+</span> crime_type <span class="op">+</span> <span class="st">' '</span> <span class="op">+</span> aggregated_data[crime_type].astype(<span class="bu">str</span>)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create a new choropleth figure</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    fig <span class="op">=</span> go.Figure(data<span class="op">=</span>go.Choropleth(</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>        locations<span class="op">=</span>aggregated_data[<span class="st">'State'</span>], </span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>        z<span class="op">=</span>aggregated_data[crime_type],</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>        locationmode<span class="op">=</span><span class="st">'USA-states'</span>,</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>        colorscale<span class="op">=</span><span class="st">'Reds'</span>,</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>        autocolorscale<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>        text<span class="op">=</span>aggregated_data[<span class="st">'text'</span>],  <span class="co"># hover text</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>        marker_line_color<span class="op">=</span><span class="st">'white'</span>,  <span class="co"># line markers between states</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>        colorbar_title<span class="op">=</span><span class="st">"Number of Incidents"</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    ))</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>    fig.update_layout(</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>        title_text<span class="op">=</span><span class="ss">f'</span><span class="sc">{</span>crime_type<span class="sc">}</span><span class="ss"> by State in 2022&lt;br&gt;(Hover for details)'</span>,</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>        geo<span class="op">=</span><span class="bu">dict</span>(</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>            scope<span class="op">=</span><span class="st">'usa'</span>,</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>            projection<span class="op">=</span>go.layout.geo.Projection(<span class="bu">type</span><span class="op">=</span><span class="st">'albers usa'</span>),</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>            showlakes<span class="op">=</span><span class="va">True</span>,  <span class="co"># lakes</span></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>            lakecolor<span class="op">=</span><span class="st">'rgb(255, 255, 255)'</span>),</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>    fig.show()</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>dropdown.observe(update_map, names<span class="op">=</span><span class="st">'value'</span>)</span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>display(dropdown)</span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>update_map({<span class="st">'new'</span>: dropdown.value})  <span class="co"># Trigger initial map display</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id":"458b0a6a54a7414bbfd0b7e70180739f","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+{"model_id":"0ace7271093b4cc3a4f5d5851fffe8f2","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
 </script>
 </div>
 <div class="cell-output cell-output-display">
 <pre><code>Unable to display output for mime type(s): application/vnd.plotly.v1+json</code></pre>
 </div>
 </div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="choropleth.png" class="img-fluid figure-img"></p>
+<figcaption>Image of the Choropleth Map</figcaption>
+</figure>
+</div>
 
-</main>
-<!-- /main column -->
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
